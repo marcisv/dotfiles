@@ -1,0 +1,9 @@
+# Code shortcut
+function c { cd ~/code/$1; }
+
+# Git
+alias gpll='git pull'
+alias gpsh='git push'
+alias gco='git checkout'
+alias gbr='git branch'
+alias gre='git rebase'

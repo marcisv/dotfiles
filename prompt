@@ -1,0 +1,16 @@
+git_branch_with_color() {
+  local git_branch_name=$(git symbolic-ref --short HEAD 2> /dev/null)
+  if [ -n "${git_branch_name}" ]; then
+    if [ -n "$(git status --porcelain)" ]; then
+      local git_status_color='%F{3}'
+    else
+      local git_status_color='%F{2}'
+    fi
+    echo "${git_status_color} (${git_branch_name})"
+  else
+    echo ''
+  fi
+}
+
+setopt PROMPT_SUBST
+PROMPT='%F{13}%~%f$(git_branch_with_color)%F{13} $%f '

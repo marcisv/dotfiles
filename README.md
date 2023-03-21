@@ -1,5 +1,7 @@
 # Installation
 
+Clone this repo to `~/.dotfiles`.
+
 Add the following lines to `.zshrc`:
 
 ```shell

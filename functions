@@ -1,0 +1,8 @@
+# Navigate to a code project directory
+function c { cd ~/code/$1; }
+
+function _autocomplete_code_projects {
+  _arguments '1:project_directory:_directories -W ~/code'
+}
+
+compdef _autocomplete_code_projects c

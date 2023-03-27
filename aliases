@@ -1,4 +1,5 @@
 # Git
+alias gst='git status'
 alias gpll='git pull'
 alias gpsh='git push'
 alias gco='git checkout'
